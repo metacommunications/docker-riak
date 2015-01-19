@@ -7,7 +7,7 @@ MAINTAINER Hector Castro hectcastro@gmail.com
 
 # Environmental variables
 ENV DEBIAN_FRONTEND noninteractive
-ENV RIAK_VERSION 2.0.2-1
+ENV RIAK_VERSION 2.0.4-1
 
 # Install Java 7
 RUN sed -i.bak 's/main$/main universe/' /etc/apt/sources.list
@@ -40,7 +40,7 @@ VOLUME /var/lib/riak
 VOLUME /var/log/riak
 
 # Open ports for HTTP and Protocol Buffers
-EXPOSE 8098 8087
+EXPOSE 8098 8087 8093
 
 # Enable insecure SSH key
 # See: https://github.com/phusion/baseimage-docker#using_the_insecure_key_for_one_container_only
